@@ -2,13 +2,15 @@ import './singleComic.scss';
 import xMen from '../../resources/img/x-men.png';
 import { useEffect, useState } from 'react';
 import useMarvelService from '../../MarvelServices/MarvelService';
+import { useParams, Link } from 'react-router-dom';
 
-const SingleComic = (props) => {
+export const SingleComicPage = (props) => {
 
     const [comic, setComic] = useState({})
     const {getComic} = useMarvelService()
+    const { comicId } = useParams()
 
-    useEffect(() => updateComic(props.id), [])
+    useEffect(() => updateComic(comicId), [])
 
     const updateComic = (id) => {
         getComic(id)
@@ -26,9 +28,7 @@ const SingleComic = (props) => {
                 <p className="single-comic__descr">Language: {comic.language}</p>
                 <div className="single-comic__price">{comic.price}</div>
             </div>
-            <a href="#" className="single-comic__back">Back to all</a>
+            <Link to="/comics" className="single-comic__back">Back to all</Link>
         </div>
     )
 }
-
-export default SingleComic;
