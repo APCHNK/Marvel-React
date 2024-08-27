@@ -39,7 +39,6 @@ const ComicsList = () => {
     }
 
     function renderItems(params) {
-        console.log(params)
         const items = params.map(item => {
             return (
                 <li key={item.id} className="comics__item">
