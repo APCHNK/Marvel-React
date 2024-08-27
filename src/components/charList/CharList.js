@@ -39,7 +39,7 @@ const CharList = (props) => {
         setCharEnded(charEnded => ended)
     }
 
-
+///////
     const itemRefs = useRef([]);
 
 
@@ -48,7 +48,7 @@ const CharList = (props) => {
         itemRefs.current[id].classList.add('char__item_selected');
         itemRefs.current[id].focus();
     }
-
+///////
     function renderItems(arr) {
         const items =  arr.map((item, i) => {
             let imgStyle = {'objectFit' : 'cover'};
