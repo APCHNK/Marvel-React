@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import useMarvelService from '../../MarvelServices/MarvelService';
 import { useParams, Link } from 'react-router-dom';
 
-export const SingleComicPage = (props) => {
+const SingleComicPage = (props) => {
 
     const [comic, setComic] = useState({})
     const {getComic} = useMarvelService()
@@ -32,3 +32,5 @@ export const SingleComicPage = (props) => {
         </div>
     )
 }
+
+export default SingleComicPage
