@@ -6,6 +6,7 @@ import Spinner from '../spinner/Spinner';
 import ErrorMessage from '../errorMessage/ErrorMessage';
 import Skeleton from '../skeleton/Skeleton';
 import { Link } from 'react-router-dom';
+import CharSearchForm from '../charSearchForm/CharSearchForm'
 
 const CharInfo = (props) => {
 
@@ -42,11 +43,14 @@ const CharInfo = (props) => {
     const content = !(loading || error || !char) ? <View char={char}/> : null;
 
     return (
-        <div className="char__info">
-            {skeleton}
-            {errorMessage}
-            {spinner}
-            {content}
+        <div className="">
+            <div className="char__info">
+                {skeleton}
+                {errorMessage}
+                {spinner}
+                {content}
+            </div>
+            <CharSearchForm/>
         </div>
     )
     
