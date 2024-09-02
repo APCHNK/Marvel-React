@@ -2,6 +2,7 @@ import AppHeader from "../appHeader/AppHeader";
 import { lazy, Suspense } from "react";
 import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Spinner from "../spinner/Spinner";
+import { Helmet } from "react-helmet";
 
 const Page404 = lazy(() => import('../pages/404'))
 const MainPage = lazy(() => import('../pages/Main'))
